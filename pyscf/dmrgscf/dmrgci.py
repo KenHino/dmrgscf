@@ -908,7 +908,7 @@ def writeIntegralFile(DMRGCI, h1eff, eri_cas, ncas, nelec, ecore=0):
 
     # The name of the FCIDUMP file, default is "FCIDUMP".
     integralFile = os.path.join(DMRGCI.runtimeDir, DMRGCI.integralFile)
-    if DMRGCI.groupname is not None and DMRGCI.orbsym is not []:
+    if DMRGCI.groupname is not None and DMRGCI.orbsym != []:
 # First removing the symmetry forbidden integrals. This has been done using
 # the pyscf internal irrep-IDs (stored in DMRGCI.orbsym)
         orbsym = numpy.asarray(DMRGCI.orbsym) % 10
